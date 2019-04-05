@@ -1,0 +1,89 @@
+<% provide(:title, "Home") %>
+
+<div class="row">  
+   
+
+  <div class="col-md-10"> 
+    
+    <div class="center jumbotron" style="background-color: pink; "  > 
+      
+      <div style="margin-top: -50px;width:100%; height: 100%; background-image:url(debbride.jpg); background-position: 0% 0%; color: white; background-repeat: no-repeat;">
+      <div style="margin-top: -50px;width:100%; height: 100%; background-image:url(jamesjulie.png); background-position: 100% 50%; color: white; background-repeat: no-repeat;">
+          
+        
+        
+        <h1>Welcome To Your Sentimental Adventure</h1>
+        
+        <h2>
+          The Sentimental Singer! 
+           Songs They Remember, Performed With Love
+            <!--<%= image_tag("deb-right.png", :alt => "deb pic", :style => "float:right;") %>-->
+        </h2>
+        <!--<%= image_tag("charis and oregano.JPG", :alt => "deb pic", :style => "float:left; border-radius: 50%;") %>-->
+      </div></div>  
+        
+    </div> 
+  </div>
+    
+    <div class="col-md-2" style="margin-top: 50px; margin-left: -40px;">
+          <%= render 'showtimes/calendar' %>
+    </div>
+</div>
+        
+    <div class="center jumbotron" style="height: 550px;background-image-radius: 50%;background-image: url(/deb.png); background-repeat: no-repeat;margin-top: 50px; color: white;">
+      <h1>Many Shows<%= image_tag("FourthOfJuly.jpg", :alt => "debpic", :style => "float:left;") %> Throughout The Year!
+      <%= image_tag("MarilynMonroe.jpg", :alt => "deb pic", :style => "float:right; border-radius: 50%;") %>
+      Your Favorite Songs and Characters Selected From Your Favorite Decades
+      <%= image_tag("Elvis.jpg", :alt => "deb pic", :style => "border-radius: 50%;float:right;") %>
+      </h1>
+      <div style="margin-top: 60px;">
+      <%= image_tag("StPatricksDay.jpg", :alt => "deb pic", :style => "float:left;") %>
+      <%= image_tag("Christmas.jpg", :alt => "deb pic", :style => "float:left;") %>
+      <%= image_tag("Valentines Day.jpg", :alt => "deb pic", :style => "float:left;") %>
+      <%= image_tag("Happy Easter.jpg", :alt => "deb pic", :style => "float:left;") %>
+      </div>
+    </div>
+    
+    <div class="center jumbotron" style="height: 400px;"> 
+      <div class="curtain2" >
+        <div class="curtain2__wrapper">
+          <input type="checkbox" checked/>
+                <div class="curtain2__panel curtain2__panel--left">
+                  <h1>Click to pull&nbsp;</h1>
+                </div> <!-- curtain2__panel -->
+                
+                <div class="curtain2__content">
+                  <img src="debbride.jpg" >                        <!--    https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/trophy.svg">-->
+                  <h2>Welcome To Your Sentimental Journey!</h2>
+                </div>
+                
+                <div class="curtain2__panel curtain2__panel--right">
+                  <h1>the curtain...</h1>
+                </div><!-- curtain2__panel -->
+                
+        </div><!--curtain2_wrapper-->
+      </div><!-- curtain2 -->
+    </div>
+
+
+
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-3">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    
+      <div>
+        <h3>Comments</h3>
+        <%= render 'shared/feed' %>
+      </div>
+    </aside>
+
+<% end %>
